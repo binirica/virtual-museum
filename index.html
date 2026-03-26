@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Virtual Museum</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+	<style>
+		/* GLOBAL STYLES */
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+            align-items: center;
+            justify-items: center;
+		}
+
+		body {
+            background-color: #0F1115;
+		}
+
+		/* HEADER */
+		.header {
+             display: grid;
+		}
+
+		.header-title {
+			font-family:'Space Grotesk';
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+            font-size: 50px;
+            padding-top: 50px;
+            color: #F5F5F5;
+		}
+
+        .subheader {
+            font-family: helvetica;
+            font-family: 'Space Grotesk';
+            font-weight: 400;
+            text-transform: uppercase;
+            color: #A1A1AA;
+            font-size: 15px;
+            padding-top: 5px;
+        }
+
+		.header-credit {
+            font-family: 'Inter';
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            font-size: 8px;
+            font-weight: lighter;
+            color: #A1A1AA;
+            padding-top: 5px;
+            padding-bottom: 40px;
+		}
+
+		/* LINKS */
+		.links {
+            display: grid;	
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            gap: 10px;
+		    max-width: 100%;
+		    margin: 0 auto;
+		}
+
+		.links-card {
+            background-color: #171A21;
+            color: #FFFFFF;
+            text-decoration: none;
+            padding: 20px;
+            display: flex;
+            gap: 10px;
+            flex-direction: column;
+		    transition: flex-grow 1s;
+            font-family: 'Inter'; 
+            font-weight: 500;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: .25em;
+		}
+
+ 	    .links-card img {
+		width: 100%;
+	    }
+
+        .crop {
+        width: 300px;  
+        height: 250px;
+        overflow: hidden; 
+        }
+        .crop img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center; 
+        }
+        .links-card:hover {
+            background: #1C212B;
+            border-color: #4F8CFF;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+            transform: translateY(-2px);
+            transition: all 0.2s ease;
+		}
+        .hidden-text {
+        display: none;
+        color: #9CA3AF;
+        font-family: 'Inter';
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 1.5;
+        }
+        .links-card:hover .hidden-text {
+        display: block;
+        max-width: 300px;
+        }
+        @media only screen and (max-width: 800px) {
+		    .links {
+			grid-template-columns: 1fr 1fr;
+		    }
+        }
+	    @media only screen and (max-width: 600px) {
+		    .links {
+			grid-template-columns: 1fr;
+		    }
+	    }
+	</style>
+</head>
+
+<body>
+	<div class="header">
+		<h1 class="header-title">The Repo</h1>
+        <h2 class="subheader">Virtual Museum of Interactive Web Tools</h2>
+		<p class="header-credit">Sourced from <a href="https://www.are.na/search?q=%7B%22term%22%3A%7B%22facet%22%3A%22web%22%7D%2C%22where%22%3A%5B%7B%22facet%22%3A%22ALL%22%7D%5D%2C%22what%22%3A%7B%22facets%22%3A%5B%22CHANNEL%22%5D%7D%2C%22fields%22%3A%7B%22facets%22%3A%5B%22ALL%22%5D%7D%2C%22order%22%3A%7B%22facet%22%3A%22SCORE%22%2C%22dir%22%3A%22DESC%22%7D%7D" style="color: #A1A1AA">Are.na</a> | Coded by Lauren Russo</p>
+	</div>
+	<div class="links">
+		<a href="https://inspiral-web.nathanfriend.com/" class="links-card" target="_blank">
+            <div class="crop">
+                <img src="images/inspiralweb.jpeg" alt="inspiralweb">
+            </div>
+			<h2>Inspiral Web</h2>
+			<p class="hidden-text">The web version of the Inspiral app by Nathan Friend</p>
+		</a>
+		<a href="https://synth.playtronica.com/dotpiano/" class="links-card" target="_blank">
+             <div class="crop">
+                 <img src="images/playtronica.gif" alt="playtronica">
+             </div>
+			<h2>Web-Synth</h2>
+			<p class="hidden-text">A visual musical instrument on the web, made by Alex Chen and Yotam Mann. </p>
+		</a>
+		<a href="https://codepen.io/macr/pen/gbNdpv" class="links-card" target="_blank">
+             <div class="crop">
+                 <img src="images/spiderweb.gif" alt="spiderweb">
+             </div>
+			<h2>Spider Web</h2>
+			<p class="hidden-text">Spider web drawn with HTML canvas arcTo Method by Matheus Lin.</p>
+		</a>
+		<a href="https://pcsteppan.github.io/web-loom/" class="links-card" target="_blank">
+            <div class="crop">
+                 <img src="images/webloom.png" alt="web-loom">
+             </div>
+			<h2>web-loom</h2>
+			<p class="hidden-text">An early release of a web-component based loom draft editor by Patrick Steppan.</p>
+		</a>
+		<a href="https://kidpix.app/" class="links-card" target="_blank">
+             <div class="crop">
+                 <img src="images/kidpix.png" alt="kidpix">
+             </div>
+			<h2>KidPix Web</h2>
+			<p class="hidden-text">Bitmap drawing program designed for children, originally by Craig Hickman</p>
+            </a>
+		<a href="https://laurasinisterra.github.io/diagram-concentric/" class="links-card" target="_blank">
+               <div class="crop">
+                 <img src="images/diagram.gif" alt="diagram">
+             </div>
+			<h2>Web Diagram</h2>
+			<p class="hidden-text">Diagram exploration in Javascript by Laura Sinisterra</p>
+		</a>
+		<a href="https://webbuttonmaker.great-site.net/?i=2" class="links-card" target="_blank">
+            <div class="crop">
+                 <img src="images/button.png" alt="button">
+             </div>
+			<h2>Web Button Maker</h2>
+			<p class="hidden-text">Online button generator made with love by Hekate</p>
+		</a>
+		<a href="https://demoland.gdwithgd.com/editor/?book=tutorial&chapter=tutorial&demo=welcome" class="links-card" target="_blank">
+             <div class="crop">
+                 <img src="" alt="demonland">
+             </div>
+			<h2>Demoland</h2>
+			<p class="hidden-text">Open source website template that allows you to distribute editable code demos (HTML, CSS, JavaScript) entirely within your web browser. This project was created by GD with GD to make teaching code easier, without the need for subscribing to any premium code distribution services.</p>
+        </a>
+		<a href="https://blog.webmemex.org/demo-plainfiles/?page=welcomeMessage" class="links-card" target="_blank">
+             <div class="crop">
+                 <img src="images/webmemex.png" alt="webmemex">
+             </div>
+			<h2>Web memex</h2>
+			<p class="hidden-text">A read/write web browser for creating notes and links by Noah Hoffmann.</p>
+		</a>
+        <a href="https://bit-tripper.ctpt.co/" class="links-card" target="_blank">
+             <div class="crop">
+                 <img src="/images/bittripper.gif" alt="bittripper">
+             </div>
+			<h2>Bit Tripper</h2>
+			<p class="hidden-text">An interactive tool for exploring generative typography powered by deep neural networks by Mikki Janower.</p>
+		</a>
+	</div>
+</body>
+</html>
